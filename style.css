@@ -1,0 +1,80 @@
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    background-color: #fffff0;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* タイムラインの全体枠 */
+.timeline {
+    position: relative;
+    padding-left: 15px; /* 左側に線のスペースを確保 */
+}
+
+/* 垂直な線 */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #d1d;
+}
+
+/* 各イベントの間隔 */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* タイムライン上の丸いドット */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -22px; /* 線の上に配置 */
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #3498db;
+    z-index: 1;
+}
+
+/* 日付のスタイル */
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #7f8c8c;
+    margin-bottom: 8px;
+}
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.timeline-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+.timeline-content p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+}
